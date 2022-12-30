@@ -87,3 +87,11 @@ input {
     border-radius: 4px;
     background-color: rgb(228, 189, 18);
 }
+
+.btn-small:disabled{
+   background-color: rgb(114, 152, 255)
+}
+
+.btn-big:disabled{
+    background-color: rgb(114, 152, 255)
+}
