@@ -30,12 +30,12 @@ const App = () => {
 
   const numberChangeHandler = (e) => {
     inputNumber = e.target.value;
-    if (inputNumber < 1 || inputNumber > 100) {
-      setWrongNumber("Guess a number inside the range 1-100");
-    } else {
+    // if (inputNumber < 1 || inputNumber > 100) {
+    //   setWrongNumber("Guess a number inside the range 1-100");
+    // } else {
       setEnteredNumber(inputNumber);
-      setWrongNumber("");
-    }
+    //   setWrongNumber("");
+    // }
   };
 
   const youWin = () => {
@@ -86,6 +86,14 @@ const App = () => {
     }
 
     console.log(typeof attempts);
+
+    if((enteredNumber < 1) || (enteredNumber >100)){
+      setWrongNumber("The number must be within the range of 1-100")
+      setEnteredNumber("");
+      return
+    } else{
+      setWrongNumber("");
+    }
 
     if (attempts > 0) {
       if (attempts >= 1 && Number(enteredNumber) === randomNumber) {
